@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,43 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AfroCut</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background */
+      color: #fff;            /* White text */
+    }
+
+    header {
+      background-color: #111;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f4a261;
+    }
+
+    .hero {
+      padding: 2rem;
+      text-align: center;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #333;
+    }
+
+    .frames {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .frame {
+      background-color: #1c1c1c;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: transform 0.2s;
+    }
+
+    .frame:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #333;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>AfroCut</h1>
     <nav>
-  <a href="index.html">Home</a>
-  <a href="#">Culture</a>
-  <a href="#">Hair</a>
-  <a href="#">Style</a>
-  <a href="signup.html">Sign Up</a>
-  <a href="login.html">Login</a>
-</nav>
-
+      <a href="index.html">Home</a>
+      <a href="#">Culture</a>
+      <a href="#">Hair</a>
+      <a href="#">Style</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Login</a>
+    </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Celebrating Black Beauty & Culture</h2>
-      <p>Latest stories, styles, and features.</p>
+      <h2>Making Access to Looking Fly Easier</h2>
+      <p>Latest stories, styles, and cultural features.</p>
     </section>
 
-    <section class="articles">
-      <article>
-        
+    <section class="frames">
+      <div class="frame">
         <h3>5 Must-Try Natural Hairstyles This Summer</h3>
-        <p>Discover trending looks from influencers and stylists.</p>
-      </article>
-      <article>
-        
+        <p>Discover trending looks from influencers and stylists across the country.</p>
+      </div>
+      <div class="frame">
         <h3>The Evolution of Afro Style Through the Decades</h3>
-        <p>A visual history of Black hair empowerment.</p>
-      </article>
+        <p>A visual journey through the power and pride of natural hair.</p>
+      </div>
+      <div class="frame">
+        <h3>DIY Haircare Routines for Healthy Curls</h3>
+        <p>Easy at-home routines using affordable and natural products.</p>
+      </div>
+      <div class="frame">
+        <h3>Top Barbers in Your City</h3>
+        <p>Meet the local legends shaping the next generation of fresh fades and edge-ups.</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 AfroCut</p>
+    <p>© 2025 AfroCut. All rights reserved.</p>
   </footer>
 </body>
 </html>
