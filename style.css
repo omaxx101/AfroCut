@@ -23,7 +23,6 @@ header h1 {
   text-align: center;
   flex: none; /* Fix to allow "auto" centering */
 }
-
 /* Hide checkbox used for toggle */
 .menu-toggle {
   display: none;
@@ -68,11 +67,7 @@ nav a:hover {
   display: flex;
 }
 
-/* Desktop view */
-@media (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
+
 
   nav {
     display: flex !important;
@@ -87,7 +82,7 @@ nav a:hover {
     margin-left: 1rem;
     margin: 0 0.5rem;
   }
-}
+
 
 /* === Hero Section === */
 .hero {
