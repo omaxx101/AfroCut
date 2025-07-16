@@ -6,24 +6,55 @@ body {
   color: #fff;
 }
 
+/* === Header === */
 header {
   background-color: #111;
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
   border-bottom: 1px solid #333;
 }
 
 header h1 {
-  text-align:center;
-  margin: 0 auto ;
+  margin: 0;
   font-size: 2rem;
+  text-align: center;
+  flex: 1;
+}
+
+/* Hide checkbox used for toggle */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+/* Navigation styles */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 10;
 }
 
 nav a {
   color: #fff;
-  margin-left: 1rem;
+  margin: 0.5rem 0;
   text-decoration: none;
   font-weight: bold;
 }
@@ -32,6 +63,33 @@ nav a:hover {
   color: #f4a261;
 }
 
+/* Show nav when checkbox is checked */
+.menu-toggle:checked + .hamburger + nav {
+  display: flex;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    margin: 0 0.5rem;
+  }
+}
+
+/* === Hero Section === */
 .hero {
   padding: 2rem;
   text-align: center;
@@ -39,6 +97,7 @@ nav a:hover {
   border-bottom: 1px solid #333;
 }
 
+/* === Frames Grid === */
 .frames {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -59,11 +118,12 @@ nav a:hover {
   transform: scale(1.02);
 }
 
+/* === Info Section === */
 .info-section {
   background-color: #111;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 2rem;
   padding: 3rem 2rem;
   border-top: 1px solid #333;
@@ -72,6 +132,10 @@ nav a:hover {
 .info-box {
   flex: 1 1 300px;
   max-width: 500px;
+  background-color: #1c1c1c;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 10px;
 }
 
 .info-box h3 {
@@ -91,16 +155,8 @@ nav a:hover {
 .info-box a:hover {
   text-decoration: underline;
 }
-.info-section {
-  background-color: #111;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  border-top: 1px solid #333;
-}
 
+/* Additional Info Block (if used) */
 .info-block {
   flex: 1 1 45%;
   max-width: 600px;
@@ -112,27 +168,10 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.info-box {
-  background-color: #1c1c1c;
-  padding: 1rem;
-  border: 1px solid #333;
-  border-radius: 10px;
-}
-
-.info-box a {
-  color: #f4a261;
-  text-decoration: none;
-}
-
-.info-box a:hover {
-  text-decoration: underline;
-}
-
-
+/* === Footer === */
 footer {
   background-color: #111;
   text-align: center;
   padding: 1rem;
   border-top: 1px solid #333;
 }
-
