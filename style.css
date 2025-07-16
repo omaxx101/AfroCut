@@ -18,10 +18,10 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  margin: 0 auto;
   font-size: 2rem;
   text-align: center;
-  flex: 1;
+  flex: none; /* Fix to allow "auto" centering */
 }
 
 /* Hide checkbox used for toggle */
