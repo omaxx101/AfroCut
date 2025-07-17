@@ -69,22 +69,6 @@ nav a:hover {
 }
 
 
-
-  nav {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background-color: transparent;
-    padding: 0;
-    margin-left: auto;
-  }
-
-  nav a {
-    margin-left: 1rem;
-    margin: 0 0.5rem;
-  }
-
-
 /* === Hero Section === */
 .hero {
   padding: 2rem;
