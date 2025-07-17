@@ -12,8 +12,9 @@ document.getElementById("signupForm")?.addEventListener("submit", function (e) {
 // Login
 document.getElementById("loginForm")?.addEventListener("submit", function (e) {
   e.preventDefault();
-  const loginUsername = document.getElementById("loginUsername").value;
-  const loginPassword = document.getElementById("loginPassword").value;
+  const loginUsername = document.getElementById("username").value;
+  const loginPassword = document.getElementById("password").value;
+
 
   const user = JSON.parse(localStorage.getItem("afrocut_user"));
   if (user && user.username === loginUsername && user.password === loginPassword) {
