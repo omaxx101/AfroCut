@@ -20,7 +20,7 @@ header {
 .hamburger {
   font-size: 2rem;
   cursor: pointer;
-  color: white;
+  color: #f4a261;
   margin-right: 1rem;
 }
 
@@ -34,7 +34,7 @@ header h1 {
   flex: 1;
   font-size: 4rem;
   text-align: center;
-  color: orange;
+  color: #f4a261;
   margin: 0;
 }
 
