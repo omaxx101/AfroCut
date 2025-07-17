@@ -1,4 +1,4 @@
-/* style.css */
+/* === Base Styles === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -12,29 +12,11 @@ header {
   padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   position: relative;
   border-bottom: 1px solid #333;
 }
 
-/* Center AfroCut title visually */
-header h1 {
-  flex: 1;
-  font-size: 5rem;
-  text-align: center;
-  color: orange;
-  margin: 0;
-}
-h2 {
-  font-size: 2.5rem;
-}
-
-header nav {
-  display: flex;
-  gap: 1rem;
-}
-
-/* Hamburger stays on the left */
+/* Hamburger icon (left) */
 .hamburger {
   font-size: 2rem;
   cursor: pointer;
@@ -46,19 +28,35 @@ header nav {
 .menu-toggle {
   display: none;
 }
-/* Navigation styles */
+
+/* AfroCut title (centered) */
+header h1 {
+  flex: 1;
+  font-size: 4rem;
+  text-align: center;
+  color: orange;
+  margin: 0;
+}
+
+/* Nav menu hidden by default */
 nav {
   display: none;
   flex-direction: column;
   position: absolute;
   top: 100%;
-  right: 20px;
+  left: 1rem;
   background-color: #222;
   padding: 1rem;
   border-radius: 8px;
   z-index: 10;
 }
 
+/* Show nav when checkbox is checked */
+.menu-toggle:checked + .hamburger + h1 + nav {
+  display: flex;
+}
+
+/* Nav links */
 nav a {
   color: #fff;
   margin: 0.5rem 0;
@@ -70,11 +68,10 @@ nav a:hover {
   color: #f4a261;
 }
 
-/* Show nav when checkbox is checked */
-.menu-toggle:checked + .hamburger + nav {
-  display: flex;
+/* === Headings === */
+h2 {
+  font-size: 2rem;
 }
-
 
 /* === Hero Section === */
 .hero {
@@ -143,7 +140,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Additional Info Block (if used) */
+/* Additional Info Block */
 .info-block {
   flex: 1 1 45%;
   max-width: 600px;
