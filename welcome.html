@@ -8,29 +8,68 @@
 </head>
 <body>
 
-   <header>
-
+<header>
   <input type="checkbox" id="menu-toggle" class="menu-toggle" />
   <label for="menu-toggle" class="hamburger">&#9776;</label>
   <h1>AfroCut</h1>
   <nav>
-    <a href="index.htm">Home</a>
+    <a href="index.html">Home</a>
     <a href="signup.html">Sign Up</a>
     <a href="login.html">Login</a>
   </nav>
 </header>
 
+<main>
+  <section class="hero">
+    <h3>Book Your Haircut Anytime, Anywhere - Only with AfroCut</h3>
+    <p>Welcome to AfroCut — your digital barber shop. Sign up, log in, and schedule your perfect cut!</p>
+  </section>
 
+  <!-- Appointment Booking Section -->
+  <section class="booking">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
 
-  <main>
-     <section class="hero">
-      <h2>Book Your Haircut Anytime, Anywhere - Only with AfroCut</h2>
-    </section>
-   
-  </main>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
 
-  <footer>
-    <p>© 2025 AfroCut. All rights reserved.</p>
-  </footer>
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required />
+
+      <label for="service">Service:</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select a Service --</option>
+        <option value="fade">Fade</option>
+        <option value="lineup">Line-up</option>
+        <option value="braids">Braids</option>
+        <option value="twists">Twists</option>
+      </select>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 AfroCut. All rights reserved.</p>
+</footer>
+
+<script>
+  // Handle the booking form submission
+  document.getElementById("bookingForm")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const service = document.getElementById("service").value;
+
+    alert(`Appointment booked!\n\nName: ${name}\nDate: ${date}\nTime: ${time}\nService: ${service}`);
+    
+    // Optional: Save to localStorage or send to backend (if connected)
+  });
+</script>
+
 </body>
 </html>
